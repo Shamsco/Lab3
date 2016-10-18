@@ -31,4 +31,11 @@ public class ListElement {
 			curr = newElement;
 		}
 	}
+	public void printLinkedListHead(){
+		ListElement curr = head;
+		do{
+			System.out.print(this.data);
+			curr = this.next;
+		}while(curr != null);
+	}
 }

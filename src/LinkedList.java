@@ -5,7 +5,10 @@ public class LinkedList {
 		// TODO Auto-generated method stub
 		ListElement le = new ListElement();
 		le.setData(5);
-		
+		ListElement another = new ListElement();
+		another.setData(6);
+		le.addElement(another);
+		le.printLinkedListHead();
 	}
 
 }
