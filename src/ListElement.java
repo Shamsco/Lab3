@@ -39,4 +39,44 @@ public class ListElement {
 			curr = curr.next;
 		}
 	}
+	public ListElement getElement(int index){
+		ListElement curr = next;
+		while(curr != null){
+			if(curr.getData() == index){
+				break;
+			}
+			curr = curr.next;
+		}
+		if(curr == null){
+			System.out.print("No item found");
+			ListElement empty = new ListElement();
+			empty.setData(0);
+			return empty;
+		}
+		return curr;
+	}
+	public void deleteElement(int index){
+		ListElement curr = this;
+		ListElement previous = null;
+		while(curr != null){
+			if(curr.getData() == index){
+				if(curr == this){
+					this.next = this.next.next;
+					break;
+				}
+				else{
+					previous.next = curr.next;
+					break;
+				}
+			}
+			previous = curr;
+			curr = curr.next;
+		}
+		if(previous.next == curr){
+			System.out.print("No item found \n");
+		}
+		
+		
+		
+	}
 }

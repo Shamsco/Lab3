@@ -17,6 +17,8 @@ public class LinkedList {
 		head.addElement(another1);
 		head.addElement(another2);
 		head.printLinkedListHead();
+		head.deleteElement(5);
+		head.printLinkedListHead();
 	}
 
 }
