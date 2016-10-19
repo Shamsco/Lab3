@@ -48,11 +48,12 @@ public class ListElement {
 			curr = curr.next;
 		}
 		if(curr == null){
-			System.out.print("No item found");
+			System.out.print("No item found \n");
 			ListElement empty = new ListElement();
 			empty.setData(0);
 			return empty;
 		}
+		System.out.print("Element Found:" + curr.getData() + "\n");
 		return curr;
 	}
 	public void deleteElement(int index){
