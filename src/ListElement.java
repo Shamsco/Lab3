@@ -1,11 +1,13 @@
 
 public class ListElement {
 	private ListElement next ;
+	private ListElement previous;
 	private int data;
 	
 	public ListElement(){
 		this.data = 0;
 		this.next = null;
+		this.previous = null;
 	}
 	public void setData(int Data){
 		this.data = Data;
@@ -21,18 +23,29 @@ public class ListElement {
 		if(this.next == null){
 			ListElement newElement = new ListElement(le);
 			this.next = newElement;
+			this.previous = null;
 		}
 		else{
 			ListElement curr = this.next;
+			ListElement prev = this.previous;
 			while(curr.next != null){
+				prev = curr;
 				curr = curr.next;
 			}
 			ListElement newElement = new ListElement(le);
 			
 			curr.next = newElement;
+			newElement.previous = prev;
 		}
 	}
 	public void printLinkedListHead(){
+		ListElement curr = next;
+		while(curr != null){
+			System.out.print(curr.data + "\n");
+			curr = curr.next;
+		}
+	}
+	public void printLinkedListTail(){
 		ListElement curr = next;
 		while(curr != null){
 			System.out.print(curr.data + "\n");
