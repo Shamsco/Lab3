@@ -27,7 +27,7 @@ public class ListElement {
 		}
 		else{
 			ListElement curr = this.next;
-			ListElement prev = this.previous;
+			ListElement prev = curr;
 			while(curr.next != null){
 				prev = curr;
 				curr = curr.next;
