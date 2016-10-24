@@ -47,10 +47,16 @@ public class ListElement {
 	}
 	public void printLinkedListTail(){
 		ListElement curr = next;
+		ListElement prev = previous;
 		while(curr != null){
-			System.out.print(curr.data + "\n");
+			prev = curr;
 			curr = curr.next;
 		}
+		while(prev!= null){
+			System.out.print(prev.data + "\n");
+			prev = prev.previous;
+		}
+		
 	}
 	public ListElement getElement(int index){
 		ListElement curr = next;
