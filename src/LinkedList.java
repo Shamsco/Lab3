@@ -10,8 +10,9 @@ public class LinkedList {
 				+ "1.Add a Element. \n"
 				+ "2.Retrieve a Element. \n"
 				+ "3.Delete a Element. \n"
-				+ "4.Print List. \n"
-				+ "5.Quit. \n");
+				+ "4.Print list from head. \n"
+				+ "5.Print list from tail. \n"
+				+ "6.Quit. \n");
 		int input = in.nextInt();
 		int element;
 		do{
@@ -40,6 +41,9 @@ public class LinkedList {
 				head.printLinkedListHead();
 				break;
 			case 5:
+				head.printLinkedListTail();
+				break;
+			case 6:
 				break;
 			default:
 				System.out.print("Invalid Input");
@@ -51,9 +55,10 @@ public class LinkedList {
 				+ "2.Retrieve a Element. \n"
 				+ "3.Delete a Element. \n"
 				+ "4.Print List. \n"
-				+ "5.Quit. \n");
+				+ "5.Print list from tail. \n"
+				+ "6.Quit. \n");
 		input = in.nextInt();
-		}while(input != 5);
+		}while(input != 6);
 		
 	}
 
